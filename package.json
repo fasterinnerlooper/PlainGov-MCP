@@ -1,0 +1,60 @@
+{
+  "name": "plain-gov-mcp",
+  "version": "0.1.0",
+  "description": "MCP server providing retrieval-first government program information from official Canadian sources",
+  "type": "module",
+  "bin": {
+    "plain-gov-mcp": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "build:tests": "tsc -p tests/tsconfig.json",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
+    "test:e2e": "npm run build && npm run build:tests && node tests/build/e2e/test-runner.js",
+    "test:e2e:quick": "node tests/build/e2e/test-runner.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "government",
+    "canada",
+    "alberta",
+    "tax",
+    "benefits",
+    "gst",
+    "ccb",
+    "cra",
+    "retrieval",
+    "compliance"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/PlainGov-MCP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/PlainGov-MCP/issues"
+  },
+  "homepage": "https://github.com/yourusername/PlainGov-MCP#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "zod": "^3.23.8",
+    "jsdom": "^25.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/jsdom": "^21.1.7",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
