@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm test:e2e
+      - run: npm run test:e2e
 
   publish-npm:
     needs: build
