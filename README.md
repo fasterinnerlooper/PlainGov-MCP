@@ -7,7 +7,6 @@ This MCP server provides government program information based solely on freshly 
 ## Quick Start
 
 ```bash
-cd plain-gov-mcp
 npm install
 npm run build
 npm run inspector  # Test the server
@@ -98,16 +97,13 @@ This keeps us out of trouble *and* attractive to institutions.
 ### Quick Install
 
 ```bash
-# 1. Navigate to server directory
-cd plain-gov-mcp
-
-# 2. Install dependencies
+# 1. Install dependencies
 npm install
 
-# 3. Build the server
+# 2. Build the server
 npm run build
 
-# 4. Test with Inspector
+# 3. Test with Inspector
 npm run inspector
 ```
 
@@ -124,7 +120,7 @@ Add to your MCP client configuration (e.g., Claude Desktop):
     "plain-gov-mcp": {
       "command": "node",
       "args": [
-        "/absolute/path/to/plain-gov-mcp/build/index.js"
+        "/absolute/path/to/PlainGov-MCP/build/index.js"
       ]
     }
   }
@@ -269,7 +265,7 @@ See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for detailed guidelines.
 
 ## License
 
-[Appropriate license - TBD]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 

@@ -13,7 +13,6 @@ Before diving into specific issues, run through this quick checklist:
 - [ ] Server built successfully (`npm run build`)
 - [ ] Configuration file has valid JSON syntax
 - [ ] Absolute paths used in configuration
-- [ ] OPENAI_API_KEY environment variable set (if required)
 - [ ] Internet connection active
 - [ ] MCP client restarted after configuration changes
 
@@ -184,52 +183,6 @@ chmod +x build/index.js
    ```powershell
    Get-Content "$env:APPDATA\Claude\logs\mcp*.log" -Wait
    ```
-
-### Issue: Environment variables not loading
-
-**Symptoms:**
-- Server starts but can't access OPENAI_API_KEY
-- "API key not found" errors
-
-**Solutions:**
-
-1. **Set in MCP client configuration (recommended):**
-   ```json
-   {
-     "mcpServers": {
-       "plain-gov-mcp": {
-         "command": "node",
-         "args": ["/path/to/build/index.js"],
-         "env": {
-           "OPENAI_API_KEY": "sk-proj-your-key-here"
-         }
-       }
-     }
-   }
-   ```
-
-2. **Verify environment variable is set:**
-
-   **Windows (PowerShell):**
-   ```powershell
-   echo $env:OPENAI_API_KEY
-   ```
-
-   **macOS/Linux:**
-   ```bash
-   echo $OPENAI_API_KEY
-   ```
-
-3. **Restart terminal/shell after setting:**
-   - Close and reopen terminal
-   - Or source configuration file:
-     ```bash
-     source ~/.zshrc  # or ~/.bashrc
-     ```
-
-4. **Check for typos:**
-   - Variable name is case-sensitive
-   - Should be `OPENAI_API_KEY` (not `OPENAI_KEY` or `API_KEY`)
 
 ### Issue: Path with spaces not working
 

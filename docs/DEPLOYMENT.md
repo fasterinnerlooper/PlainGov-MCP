@@ -227,11 +227,6 @@ chmod +x /path/to/plain-gov-mcp/build/index.js
 **Gatekeeper:**
 If macOS blocks execution, you may need to allow the application in System Preferences > Security & Privacy.
 
-**Shell Configuration:**
-If using environment variables in shell, add to `~/.zshrc` or `~/.bash_profile`:
-```bash
-export OPENAI_API_KEY="your-api-key-here"
-```
 
 ### Linux
 
@@ -248,10 +243,7 @@ If Node.js is not in PATH, use the full path to node:
   "mcpServers": {
     "plain-gov-mcp": {
       "command": "/usr/bin/node",
-      "args": ["/path/to/build/index.js"],
-      "env": {
-        "OPENAI_API_KEY": "your-api-key-here"
-      }
+      "args": ["/path/to/build/index.js"]
     }
   }
 }
