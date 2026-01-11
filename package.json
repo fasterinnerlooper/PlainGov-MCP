@@ -1,25 +1,7 @@
 {
-  "name": "plain-gov-mcp",
+  "name": "@fasterinnerlooper/plain-gov-mcp",
   "version": "0.1.0",
   "description": "MCP server providing retrieval-first government program information from official Canadian sources",
-  "type": "module",
-  "bin": {
-    "plain-gov-mcp": "./build/index.js"
-  },
-  "files": [
-    "build",
-    "README.md",
-    "LICENSE"
-  ],
-  "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "build:tests": "tsc -p tests/tsconfig.json",
-    "prepare": "npm run build",
-    "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
-    "test:e2e": "npm run build && npm run build:tests && node tests/build/e2e/test-runner.js",
-    "test:e2e:quick": "node tests/build/e2e/test-runner.js"
-  },
   "keywords": [
     "mcp",
     "model-context-protocol",
@@ -34,16 +16,40 @@
     "retrieval",
     "compliance"
   ],
-  "author": "Shafiq Jetha <shafiq.jetha@outlook.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fasterinnerlooper/PlainGov-MCP.git"
-  },
+  "homepage": "https://github.com/fasterinnerlooper/PlainGov-MCP#readme",
   "bugs": {
     "url": "https://github.com/fasterinnerlooper/PlainGov-MCP/issues"
   },
-  "homepage": "https://github.com/fasterinnerlooper/PlainGov-MCP#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fasterinnerlooper/PlainGov-MCP.git"
+  },
+  "license": "MIT",
+  "author": "Shafiq Jetha <shafiq.jetha@outlook.com>",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "plain-gov-mcp": "build/index.js"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "test": "npm run test:e2e",
+    "build:tests": "tsc -p tests/tsconfig.json",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
+    "test:e2e": "npm run build && npm run build:tests && node tests/build/e2e/test-runner.js",
+    "test:e2e:quick": "node tests/build/e2e/test-runner.js"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
     "zod": "^3.23.8",
