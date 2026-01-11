@@ -34,16 +34,16 @@
     "retrieval",
     "compliance"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Shafiq Jetha <shafiq.jetha@outlook.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/PlainGov-MCP.git"
+    "url": "https://github.com/fasterinnerlooper/PlainGov-MCP.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/PlainGov-MCP/issues"
+    "url": "https://github.com/fasterinnerlooper/PlainGov-MCP/issues"
   },
-  "homepage": "https://github.com/yourusername/PlainGov-MCP#readme",
+  "homepage": "https://github.com/fasterinnerlooper/PlainGov-MCP#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
     "zod": "^3.23.8",
